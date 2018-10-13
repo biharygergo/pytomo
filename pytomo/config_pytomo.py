@@ -52,9 +52,9 @@ LOOP = False
 RELATED = False
 
 # Image file to save the graphs
-PLOT = False
+PLOT = True
  # List containig the column names to be plotted
-COLUMN_NAMES = ['DownloadBytes', 'MaxInstantThp']
+COLUMN_NAMES = ['DownloadBytes', 'MaxInstantThp', 'PingMin' , 'PingAvg' , 'PingMax' , 'DownloadTime']
 # Choose from  [ PingMin , PingAvg , PingMax , DownloadTime, VideoDuration
 # VideoLength, EncodingRate, DownloadBytes, DownloadInterruptions,
 # BufferingDuration, PlaybackDuration, BufferDurationAtEnd, MaxInstantThp]
