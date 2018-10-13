@@ -905,8 +905,7 @@ def do_rounds(input_links, result_stream, data_base, db_file,
                                 config_pytomo.DELAY_BETWEEN_REQUESTS)
         # The plot is redrawn everytime the database is updated
         if config_pytomo.PLOT:
-            lib_plot.plot_data(db_file, config_pytomo.COLUMN_NAMES,
-                               image_file)
+            lib_plot.plot_data(config_pytomo.COLUMN_NAMES, image_file, db_file)
 
 def do_crawl(result_stream=None, db_file=None, timestamp=None,
              image_file=None, loop=False, related=True, hd_first=False):
@@ -1512,8 +1511,8 @@ def main(version=None, argv=None):
         config_pytomo.LOG.exception('Uncaught exception: %s', mes)
     config_pytomo.LOG.debug(CACHED_PREFIXES)
     if config_pytomo.PLOT:
-        lib_plot.plot_data(db_file, config_pytomo.COLUMN_NAMES,
-                           image_file)
+        lib_plot.plot_data(config_pytomo.COLUMN_NAMES, image_file, db_file)
+
     if result_file:
         result_stream.close()
     log_md5_results(result_file, db_file)
