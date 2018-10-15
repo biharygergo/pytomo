@@ -48,8 +48,8 @@ LOOP = False
 #LOOP = True
 
 # take related links
-#RELATED = True
-RELATED = False
+RELATED = True # Bintang: see lecture assignment pdf
+#RELATED = False
 
 # Image file to save the graphs
 PLOT = True
@@ -69,8 +69,8 @@ RRD_PLOT_DIR = 'images'
 TEMPLATE_FILE = 'index.html'
 TEMPLATES_DIR = 'templates'
 DOC_DIR = 'templates/doc/'
-PDF_FILE = 'report.pdf'
 PDF_DIR = 'pdfs'
+PDF_FILE = 'report.pdf'
 # graphical interface default port to run on
 WEB_DEFAULT_PORT = '5555'
 
@@ -138,7 +138,7 @@ DNS_TIMEOUT = 4.0
 EXTRA_NAME_SERVERS = [GOOGLE_PUBLIC_DNS, OPEN_DNS]
 #EXTRA_NAME_SERVERS = []
 # also download video from IPs resolved by other DNS servers
-DOWNLOAD_FROM_EXTRA_IPS = False
+DOWNLOAD_FROM_EXTRA_IPS = True
 
 # just for sharing the servers between the modules
 EXTRA_NAME_SERVERS_CC = []
