@@ -44,17 +44,17 @@ CENTRALISE_DATA = False
 CENTRALISATION_SERVER = 'pytomo.dtdns.net'
 
 # loop on input links
-LOOP = False
-#LOOP = True
+#LOOP = False
+LOOP = True
 
 # take related links
-RELATED = True # Bintang: see lecture assignment pdf
-#RELATED = False
+#RELATED = True # Bintang: see lecture assignment pdf
+RELATED = False
 
 # Image file to save the graphs
-PLOT = True
+PLOT = False
  # List containig the column names to be plotted
-COLUMN_NAMES = ['DownloadBytes', 'MaxInstantThp', 'PingMin' , 'PingAvg' , 'PingMax' , 'DownloadTime']
+COLUMN_NAMES = ['DownloadBytes', 'MaxInstantThp', 'PingMin' , 'PingAvg' , 'PingMax' , 'DownloadTime', 'PlaybackDuration']
 # Choose from  [ PingMin , PingAvg , PingMax , DownloadTime, VideoDuration
 # VideoLength, EncodingRate, DownloadBytes, DownloadInterruptions,
 # BufferingDuration, PlaybackDuration, BufferDurationAtEnd, MaxInstantThp]
@@ -133,10 +133,12 @@ PROXIES = None
 # other DNS servers to query
 GOOGLE_PUBLIC_DNS = ('google_public_dns', '8.8.8.8')
 OPEN_DNS = ('open_dns', '208.67.220.220')
+COMODO_DNS = ('comodo_dns', '8.26.56.26')
+AALTO_DNS = ('aalto_dns', '130.233.224.132')
 # The lifetime of a DNS query(in seconds). The default is 30 seconds.
 DNS_TIMEOUT = 4.0
-EXTRA_NAME_SERVERS = [GOOGLE_PUBLIC_DNS, OPEN_DNS]
-#EXTRA_NAME_SERVERS = []
+#EXTRA_NAME_SERVERS = [GOOGLE_PUBLIC_DNS, AALTO_DNS]
+EXTRA_NAME_SERVERS = [OPEN_DNS]
 # also download video from IPs resolved by other DNS servers
 DOWNLOAD_FROM_EXTRA_IPS = True
 
