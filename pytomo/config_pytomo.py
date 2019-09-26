@@ -19,8 +19,8 @@ BATCH_MODE = False
 PROVIDER = ''
 
 RESULT_DIR = 'results'
-RESULT_FILE = None
-#RESULT_FILE = 'pytomo.result'
+#RESULT_FILE = None
+RESULT_FILE = 'pytomo.result'
 
 DATABASE_DIR = 'databases'
 DATABASE = 'pytomo_database.db'
@@ -88,7 +88,7 @@ STD_HEADERS = {
 ################################################################################
 # for start_pytomo.py
 
-STATIC_URL_LIST = []
+STATIC_URL_LIST = ['https://www.youtube.com/watch?v=gujnQOwRU3U','https://www.youtube.com/watch?v=_31bnsIeRhg']
 INPUT_FILE = None
 
 # Max number of rounds to perform
