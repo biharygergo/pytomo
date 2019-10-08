@@ -485,15 +485,10 @@ template')
         while count <= retries:
             # Establish connection
             try:
-<<<<<<< HEAD
+
                 data = urllib2.urlopen(request, context=ssl._create_unverified_context())
                 #data = opener.open(request)
-=======
-                #data = urllib2.urlopen(request,
-                #                       timeout=config_pytomo.URL_TIMEOUT)
-                data = urllib2.urlopen(request, context=ssl._create_unverified_context())
-                        #data = opener.open(request)
->>>>>>> master
+
                 break
             except (urllib2.HTTPError, ), err:
                 if (err.code < 500 or err.code >= 600) and err.code != 416:
