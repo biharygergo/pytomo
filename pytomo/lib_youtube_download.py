@@ -56,7 +56,7 @@ class YoutubeIE(lib_general_download.InfoExtractor):
 #                  '(?:$|[^a-z_A-Z0-9-])))|ytuser:)(?!feed/)([A-Za-z0-9_-]+)')
     _VALID_URL_CHANNEL = (r'^(?:https?://)?(?:youtu\.be|(?:\w+\.)?youtube'
                           '(?:-nocookie)?\.com)/channel/([0-9A-Za-z_-]+)')
-    _TEMPLATE_URL_CHANNEL = (r'http://www.youtube.com/channel/%s/videos?'
+    _TEMPLATE_URL_CHANNEL = (r'https://www.youtube.com/channel/%s/videos?'
                              'sort=da&flow=list&view=0&page=%s&gl=US&hl=en')
     _URL_GROUP_NB_VIDEO_ID = 2
     #_LANG_URL = (r'http://www.youtube.com/?' +
@@ -146,6 +146,7 @@ class YoutubeIE(lib_general_download.InfoExtractor):
                     % str(err))
                 return
         if 'account_playback_token' not in video_info:
+
             if 'reason' in video_info:
                 self._downloader.trouble(u'ERROR: YouTube said: %s'
                                          % video_info['reason'][0].decode(

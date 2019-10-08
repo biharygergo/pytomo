@@ -11,15 +11,10 @@ import cdfplot_new
 from optparse import OptionParser
 from collections import defaultdict
 from itertools import cycle
-try:
-    #from matplotlib.backends.backend_pdf import PdfPages
-    import matplotlib as mpl
-    import matplotlib.pyplot as plt
-    from matplotlib import rcParams
-except ImportError:
-    rcParams = None
-    plt = None
-    mpl = None
+
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
 
 DNS_RESOLVERS = ['open', 'google', 'default']
 

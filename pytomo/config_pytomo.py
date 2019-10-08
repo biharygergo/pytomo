@@ -19,8 +19,8 @@ BATCH_MODE = False
 PROVIDER = ''
 
 RESULT_DIR = 'results'
-RESULT_FILE = None
-#RESULT_FILE = 'pytomo.result'
+#RESULT_FILE = None
+RESULT_FILE = 'pytomo.result'
 
 DATABASE_DIR = 'databases'
 DATABASE = 'pytomo_database.db'
@@ -44,17 +44,17 @@ CENTRALISE_DATA = False
 CENTRALISATION_SERVER = 'pytomo.dtdns.net'
 
 # loop on input links
-LOOP = False
-#LOOP = True
+#LOOP = False
+LOOP = True
 
 # take related links
-#RELATED = True
+#RELATED = True # Bintang: see lecture assignment pdf
 RELATED = False
 
 # Image file to save the graphs
 PLOT = False
  # List containig the column names to be plotted
-COLUMN_NAMES = ['DownloadBytes', 'MaxInstantThp']
+COLUMN_NAMES = ['DownloadBytes', 'MaxInstantThp', 'PingMin' , 'PingAvg' , 'PingMax' , 'DownloadTime', 'PlaybackDuration']
 # Choose from  [ PingMin , PingAvg , PingMax , DownloadTime, VideoDuration
 # VideoLength, EncodingRate, DownloadBytes, DownloadInterruptions,
 # BufferingDuration, PlaybackDuration, BufferDurationAtEnd, MaxInstantThp]
@@ -69,8 +69,8 @@ RRD_PLOT_DIR = 'images'
 TEMPLATE_FILE = 'index.html'
 TEMPLATES_DIR = 'templates'
 DOC_DIR = 'templates/doc/'
-PDF_FILE = 'report.pdf'
 PDF_DIR = 'pdfs'
+PDF_FILE = 'report.pdf'
 # graphical interface default port to run on
 WEB_DEFAULT_PORT = '5555'
 
@@ -95,6 +95,7 @@ STATIC_URL_LIST = [
     'https://www.youtube.com/watch?v=SE_ccFHjL_w',
     'https://www.youtube.com/watch?v=BRU-e7_Rm_M&t=1s'
     ]
+
 INPUT_FILE = None
 
 # Max number of rounds to perform
@@ -139,12 +140,14 @@ PROXIES = None
 # other DNS servers to query
 GOOGLE_PUBLIC_DNS = ('google_public_dns', '8.8.8.8')
 OPEN_DNS = ('open_dns', '208.67.220.220')
+COMODO_DNS = ('comodo_dns', '8.26.56.26')
+AALTO_DNS = ('aalto_dns', '130.233.224.132')
 # The lifetime of a DNS query(in seconds). The default is 30 seconds.
 DNS_TIMEOUT = 4.0
-EXTRA_NAME_SERVERS = [GOOGLE_PUBLIC_DNS, OPEN_DNS]
-#EXTRA_NAME_SERVERS = []
+#EXTRA_NAME_SERVERS = [GOOGLE_PUBLIC_DNS, AALTO_DNS]
+EXTRA_NAME_SERVERS = [OPEN_DNS]
 # also download video from IPs resolved by other DNS servers
-DOWNLOAD_FROM_EXTRA_IPS = False
+DOWNLOAD_FROM_EXTRA_IPS = True
 
 # just for sharing the servers between the modules
 EXTRA_NAME_SERVERS_CC = []
